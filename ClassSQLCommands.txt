@@ -1,0 +1,39 @@
+
+
+1. Creating database
+create database hospital
+
+2. Creating table 1
+create table patient (
+    patient_id int(10) not null AUTO_INCREMENT,
+    patient_name varchar(100),
+    mobile_number varchar(11),
+    PRIMARY KEY(patient_id)
+);
+
+3. Creating table 2
+create table doctor (
+    doc_id int(10) not null,
+    doc_name varchar(100),
+    specialization varchar(100),
+    PRIMARY KEY(doc_id)
+);
+
+4. Adding values to table 1
+INSERT INTO patient (patient_id, patient_name, mobile_number) 
+VALUES ('111','Tahmeed','01700547406'),
+		('','Tamim','01400547406'),
+        ('','Tasin','01600547406'),
+        ('','Sami','01900547406'),
+        ('','Sakib','01300547406');
+
+5. Adding values to table 2
+INSERT INTO doctor (doc_id, doc_name, specialization) 
+VALUES ('999','Sayma','medicine'),
+		('444','Mansura','medicine'),
+        ('333','Liza','diagnostic'),
+        ('888','Shoyaeeb','dermatology'),
+        ('555','Tayeba','neurology');
+
+6. Searching doctors who are specialized in medicine
+SELECT * FROM doctor WHERE specialization = 'medicine'
